@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;500&display=swap");
+
+:root {
+    --background-color: #000000;
+    --primary-text-color: #FFFFFF; 
+    --secondary-text-color: #C0C0C0;
+    --accent-color: #00FFFF; 
+    --accent-color-dark: #009BFF; 
+    --highlight-color: #FFD700; 
+    --card-background-color: #1F1F1F; 
+    --shadow-color: rgba(0, 0, 0, 0.8);
+    --button-hover-shadow: rgba(0, 0, 0, 0.6); 
+    --time-font-family: 'Roboto', sans-serif;
+    --time-font-size: 0.9rem;
+    --time-color: #C0C0C0; 
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: var(--primary-text-color);
+    background-color: var(--background-color);
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+a:hover {
+    color: var(--highlight-color);
+}
+
+ul {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+nav {
+    background-color: #1c1c1c;
+    box-shadow: 0 0 4px var(--shadow-color);
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+}
+
+.main-nav {
+    justify-content: space-between;
+    padding-block: 8px;
+}
+
+.company-logo img {
+    width: 120px;
+}
+
+.nav-links ul {
+    gap: 16px;
+}
+
+.hover-link {
+    cursor: pointer;
+    color: var(--primary-text-color);
+}
+
+.hover-link:hover {
+    color: var(--secondary-text-color);
+}
+
+.hover-link:active {
+    color: var(--highlight-color);
+}
+
+.nav-item.active {
+    color: var(--highlight-color);
+}
+
+.search-bar {
+    height: 32px;
+    gap: 8px;
+}
+
+.news-input {
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 4px;
+    border: 2px solid var(--secondary-text-color);
+    font-family: "Roboto", sans-serif;
+    background-color: #2c2c2c;
+    color: var(--primary-text-color);
+}
+
+.search-button {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    box-shadow: 0 2px 4px var(--button-hover-shadow);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: var(--accent-color-dark);
+    box-shadow: 0 4px 8px var(--button-hover-shadow);
+}
+
+main {
+    padding-block: 20px;
+    margin-top: 80px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.card {
+    flex: 1 1 360px;
+    min-height: 400px;
+    box-shadow: 0 0 4px var(--shadow-color);
+    border-radius: 8px; 
+    cursor: pointer;
+    background-color: var(--card-background-color);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px var(--shadow-color);
+    background-color: #2a2a2a;
+}
+
+.card-header img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 12px;
+    text-align: justify;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    font-weight: 300; 
+    margin-bottom: 10px;
+    color: var(--primary-text-color);
+}
+
+.news-source {
+    margin-block: 12px;
+    font-family: var(--time-font-family);
+    font-size: var(--time-font-size);
+    color: var(--time-color);
+}
+
+.news-desc {
+    margin: 0;
+    color: var(--primary-text-color);
+    line-height: 1.6; 
+}
+
+.highlight {
+    background-color: var(--highlight-color);
+    color: var(--primary-text-color);
+}
